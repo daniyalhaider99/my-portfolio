@@ -1,0 +1,53 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css';
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 1em 0;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 1em;
+  text-decoration: none;
+}
+
+section {
+  padding: 2em;
+  text-align: center;
+}
+
+#home {
+  background: #f4f4f4;
+}
+
+#about, #works, #contact {
+  background: #e4e4e4;
+}
+
+.work {
+  margin-bottom: 1em;
+}
+
+form input, form textarea {
+  display: block;
+  margin: 1em auto;
+  padding: 0.5em;
+  width: 80%;
+  max-width: 400px;
+}
+
+button {
+  padding: 0.5em 2em;
+  background: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
