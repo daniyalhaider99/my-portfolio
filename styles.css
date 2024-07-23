@@ -28,7 +28,7 @@ section {
   background: #f4f4f4;
 }
 
-#about, #works, #contact {
+#about, #services, #works, #testimonials, #contact {
   background: #e4e4e4;
 }
 
@@ -50,4 +50,11 @@ button {
   color: white;
   border: none;
   cursor: pointer;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 1em 0;
+  text-align: center;
 }

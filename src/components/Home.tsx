@@ -1,4 +1,5 @@
 import React from 'react';
+import 'animate.css';
 
 const Home: React.FC = () => (
   <section id="home" className="animate__animated animate__fadeIn">
