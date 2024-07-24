@@ -1,20 +1,16 @@
 @import 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css';
-
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  background-color: #121212;
+  color: #ffffff;
 }
 
 header {
-  background-color: #333;
-  color: white;
-  padding: 1em 0;
-  text-align: center;
+  background-color: #1f1f1f;
+  color: #ffffff;
 }
 
 nav a {
-  color: white;
+  color: #ffffff;
   margin: 0 1em;
   text-decoration: none;
 }
@@ -25,27 +21,20 @@ section {
 }
 
 #home {
-  background: #f4f4f4;
+  background: #1f1f1f;
 }
 
 #about, #services, #works, #testimonials, #contact {
-  background: #e4e4e4;
-}
-
-.work {
-  margin-bottom: 1em;
+  background: #1a1a1a;
 }
 
 form input, form textarea {
-  display: block;
-  margin: 1em auto;
-  padding: 0.5em;
-  width: 80%;
-  max-width: 400px;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
 }
 
 button {
-  padding: 0.5em 2em;
   background: #333;
   color: white;
   border: none;
@@ -53,8 +42,18 @@ button {
 }
 
 footer {
-  background-color: #333;
+  background-color: #1f1f1f;
   color: white;
   padding: 1em 0;
   text-align: center;
+}
+
+.big-text {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.animated-text {
+  color: #ff5733; /* Change this color to match your theme */
+  font-size: 1.5em;
 }

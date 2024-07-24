@@ -7,6 +7,8 @@ import Works from './components/Works';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'animate.css';
 import '../styles.css';
 
 const App: React.FC = () => (

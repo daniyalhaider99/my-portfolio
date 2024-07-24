@@ -2,7 +2,7 @@ import React from 'react';
 import 'animate.css';
 
 const Works: React.FC = () => (
-  <section id="works" className="animate__animated animate__fadeInUp">
+  <section id="works" className="animate__animated animate__fadeIn">
     <h2>My Recent Works</h2>
     <div className="work">
       <h3>Software Design for Codeefly</h3>
