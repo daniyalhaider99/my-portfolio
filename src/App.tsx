@@ -1,9 +1,9 @@
 import React from 'react';
 import Header from './components/Header';
 import Home from './components/Home';
-import About from './components/About';
-import Services from './components/Services';
-import Works from './components/Works';
+// import About from './components/About';
+// import Services from './components/Services';
+// import Works from './components/Works';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -15,9 +15,9 @@ const App: React.FC = () => (
   <div>
     <Header />
     <Home />
-    <About />
-    <Services />
-    <Works />
+    {/* <About /> */}
+    {/* <Services /> */}
+    {/* <Works /> */}
     <Testimonials />
     <Footer />
   </div>

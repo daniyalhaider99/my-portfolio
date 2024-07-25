@@ -2,9 +2,9 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const navItems = [
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#works", label: "Works" },
+  // { href: "#about", label: "About" },
+  // { href: "#services", label: "Services" },
+  // { href: "#works", label: "Works" },
   { href: "#testimonials", label: "Endorsements" },
 ];
 
