@@ -46,6 +46,7 @@ footer {
   color: white;
   padding: 1em 0;
   text-align: center;
+  margin-top: 20px;
 }
 
 .big-text {
@@ -71,11 +72,14 @@ footer {
   color: #f8f9fa; 
   border: 1px solid #495057; 
   border-radius: 8px; 
+  overflow: hidden;
 }
 
 .testimonial-card .card-body {
   padding: 20px; 
   text-align: left; 
+  max-height: 350px;
+  overflow-y: auto;
 }
 
 .testimonial-card .card-title {
