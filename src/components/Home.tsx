@@ -13,7 +13,7 @@ const Home: React.FC = () => {
       setText(texts[index]);
     }, 1000);
     return () => clearInterval(interval);
-  }, []);
+  });
 
   return (
     <section id="home" className="animate__animated animate__fadeIn">

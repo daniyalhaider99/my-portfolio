@@ -1,6 +1,6 @@
 @import 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css';
 body {
-  background-color: #121212;
+  background-color: #1a1a1a;
   color: #ffffff;
 }
 
@@ -24,7 +24,7 @@ section {
   background: #1f1f1f;
 }
 
-#about, #services, #works, #testimonials, #contact {
+#about, #services, #works, #testimonials {
   background: #1a1a1a;
 }
 
@@ -54,6 +54,46 @@ footer {
 }
 
 .animated-text {
-  color: #ff5733; /* Change this color to match your theme */
+  color: #ff5733;
   font-size: 1.5em;
+}
+.testimonial-card-wrapper {
+  height: 300px; 
+  position: relative;
+}
+
+.testimonial-card {
+  width: 100%;
+  max-width: 500px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #343a40;
+  color: #f8f9fa; 
+  border: 1px solid #495057; 
+  border-radius: 8px; 
+}
+
+.testimonial-card .card-body {
+  padding: 20px; 
+  text-align: left; 
+}
+
+.testimonial-card .card-title {
+  color: #f8f9fa; 
+  font-weight: bold; 
+  margin-bottom: 10px; 
+}
+
+.testimonial-card .card-text {
+  color: #e9ecef;
+  margin-bottom: 0;
+}
+
+.card-img-top {
+  max-height: 150px;
+  object-fit: cover;
+}
+
+.position-absolute {
+  top: 0;
 }

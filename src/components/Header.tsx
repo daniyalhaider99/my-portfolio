@@ -5,8 +5,7 @@ const navItems = [
   { href: "#about", label: "About" },
   { href: "#services", label: "Services" },
   { href: "#works", label: "Works" },
-  { href: "#testimonials", label: "Testimonials" },
-  { href: "#contact", label: "Contact" }
+  { href: "#testimonials", label: "Endorsements" },
 ];
 
 const Header: React.FC = () => (
