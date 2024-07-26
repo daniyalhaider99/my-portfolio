@@ -18,7 +18,7 @@ const Testimonials: React.FC = () => {
 
     const interval = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, [isHovered]);
