@@ -4,7 +4,7 @@ import 'animate.css';
 
 const Home: React.FC = () => {
   const [text, setText] = useState('Software Engineer');
-  const texts = ['Software Engineer', 'Web Developer'];
+  const texts = ['Software Engineer', 'Web Developer', 'Freelancer'];
 
   useEffect(() => {
     let index = 0;

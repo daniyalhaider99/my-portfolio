@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const navItems = [
   { href: "#about", label: "About Me" },
-  // { href: "#services", label: "Services" },
+  { href: "#services", label: "Services" },
   // { href: "#works", label: "Works" },
   { href: "#testimonials", label: "Endorsements" },
 ];
