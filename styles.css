@@ -105,3 +105,34 @@ footer {
 .text-left {
   text-align: left;
 }
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.service-row {
+  margin-bottom: 2rem;
+}
+
+.service-item {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.service-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.service-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.service-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+}

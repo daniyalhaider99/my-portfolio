@@ -24,8 +24,8 @@ const Testimonials: React.FC = () => {
   }, [isHovered]);
 
   return (
-    <section id="testimonials" className="my-5">
-      <h2 className="text-center mb-4">Reviews & Endorsements</h2>
+    <section id="testimonials">
+      <h1 className="section-title text-center">Reviews & Endorsements</h1>
       <div className="position-relative testimonial-card-wrapper">
         {testimonials.map((testimonial, index) => (
           <div
