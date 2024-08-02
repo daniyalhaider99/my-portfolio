@@ -11,9 +11,9 @@ const Home: React.FC = () => {
     const interval = setInterval(() => {
       index = (index + 1) % texts.length;
       setText(texts[index]);
-    }, 1000);
+    }, 1500);
     return () => clearInterval(interval);
-  });
+  }, []);
 
   return (
     <section id="home" className="animate__animated animate__fadeIn">
