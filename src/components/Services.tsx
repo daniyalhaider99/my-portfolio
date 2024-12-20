@@ -41,6 +41,16 @@ const Services: React.FC = () => (
           </p>
         </div>
       </div>
+      <div className="row service-row">
+        <div className="col-md-6 service-item">
+          <img src="/api_dev.jpg" alt="API Development" className="service-image" />
+          <h3>Data Migration</h3>
+          <p>
+            I specialize in developing robust and scalable APIs that serve as the backbone for your applications.
+            Whether it's RESTful or GraphQL, I ensure seamless integration and high performance to meet your business needs.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 );
