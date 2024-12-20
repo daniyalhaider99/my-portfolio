@@ -43,7 +43,7 @@ const Services: React.FC = () => (
       </div>
       <div className="row service-row">
         <div className="col-md-6 service-item">
-          <img src="/api_dev.jpg" alt="API Development" className="service-image" />
+          <img src="/data_migration.jpeg" alt="Data Migration" className="service-image" />
           <h3>Data Migration</h3>
           <p>
             I specialize in developing robust and scalable APIs that serve as the backbone for your applications.
