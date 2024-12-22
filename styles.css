@@ -136,3 +136,32 @@ footer {
   font-size: 1rem;
   line-height: 1.6;
 }
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.project-card {
+  position: relative;
+  padding: 16px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.project-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
