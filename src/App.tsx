@@ -4,7 +4,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Experience from './components/Experience';
 import Services from './components/Services';
-// import Works from './components/Works';
+import Works from './components/Works';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -19,7 +19,7 @@ const App: React.FC = () => (
     <About />
     <Experience />
     <Services />
-    {/* <Works /> */}
+    <Works />
     <Testimonials />
     <Footer />
   </div>

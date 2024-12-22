@@ -32,7 +32,7 @@ const Testimonials: React.FC = () => {
 
   return (
     <section id="testimonials">
-      <h1 className="section-title text-center">Reviews & Endorsements</h1>
+      <h1 className="section-title text-center">Reviews & Recommendations</h1>
       <div className="position-relative testimonial-card-wrapper">
         {testimonials.map((testimonial, index) => (
           <div
