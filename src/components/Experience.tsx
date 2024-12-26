@@ -31,14 +31,14 @@ const experiences: WorkExperience[] = [
     position: 'Software Engineer',
     duration: 'July 2023 - July 2024',
     description: 'As a Software Engineer, I implemented new client requests with agility, contributed significantly to backend development, designed REST APIs for client mobile apps, made strategic technical decisions for new features, improved code quality through diligent practices, and conducted technical interviews.',
-    image: "/logo_dnt.svg"
+    image: "/dnt_logo.svg"
   },
   {
     company: 'DevnTech',
     position: 'Associate Software Engineer',
     duration: 'July 2022 - July 2023',
     description: "As an Associate Software Engineer, I developed efficient, testable code, executed the full SDLC, created documentation for requirements and solutions, ensured quality assurance, maintained and upgraded systems, deployed programs, incorporated user feedback, and ensured compliance with project plans and industry standards.",
-    image: "/logo_dnt.svg"
+    image: "/dnt_logo.svg"
   }
 ];
 

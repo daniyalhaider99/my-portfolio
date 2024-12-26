@@ -1,3 +1,4 @@
+import Card from 'react-bootstrap/Card';
 import React from 'react';
 import 'animate.css';
 
@@ -6,17 +7,17 @@ const Works: React.FC = () => {
     {
       name: 'Jarvis',
       description: '',
-      imageUrl: '/jarvis.jpg'
+      imageUrl: '/jarvis.svg'
     },
     {
       name: 'Astria Learning',
       description: 'Description of ABC Corp project...',
-      imageUrl: '/astria.png'
+      imageUrl: '/astria.svg'
     },
     {
       name: 'Elocker',
       description: 'Elocker is a locker management system with a web app in ROR and a hardware connection. Different Systems present as types of lockers.',
-      imageUrl: '/elocker.jpeg',
+      imageUrl: '/elocker.svg'
     },
     {
       name: 'HuntWallet',
@@ -40,10 +41,13 @@ const Works: React.FC = () => {
       <h1 className="section-title text-center">Projects</h1>
       <div className="projects-grid">
         {projects.map((project) => (
-          <div key={project.name} className="project-card" data-tip={project.description}>
-            <img src={project.imageUrl} alt={project.name} className="project-image" />
-            <h3>{project.name}</h3>
-          </div>
+          <Card className='project-card'>
+            <Card.Img src={project.imageUrl} alt={project.name} className="project-image" />
+              <Card.Body>
+                <Card.Title>{project.name}</Card.Title>
+                <Card.Text></Card.Text>
+              </Card.Body>
+          </Card>
         ))}
       </div>
     </section>
