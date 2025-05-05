@@ -13,6 +13,14 @@ type WorkExperience = {
 
 const experiences: WorkExperience[] = [
   {
+
+    company: 'Infinikorn',
+    position: 'Software Engineer',
+    duration: 'February 2025 - Present',
+    description: '',
+    image: "/infinikorn.png"
+  },
+  {
     company: 'Upwork',
     position: 'Freelancer',
     duration: 'November 2024 - Present',

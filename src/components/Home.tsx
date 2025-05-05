@@ -24,7 +24,7 @@ const Home: React.FC = () => {
           <p className="animated-text animate__animated animate__fadeIn">{text}</p>
         </div>
         <div className="col-md-6 animate__animated animate__fadeInRight">
-          <img src="/image.jpg" alt="Daniyal Haider" className="img-fluid rounded" />
+          <img src="/headshot.jpg" alt="Daniyal Haider" className="img-fluid rounded" />
         </div>
       </div>
     </section>
