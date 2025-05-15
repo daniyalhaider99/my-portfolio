@@ -6,8 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const navItems = [
   { href: "#about", label: "About Me" },
-  { href: "#experience", label: "Experience" },
-  { href: "#services", label: "Services" },
+  { href: "#experiences", label: "Experience" },
+  { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
   { href: "#testimonials", label: "Reviews" },
 ];
@@ -26,7 +26,6 @@ const Header: React.FC = () => (
       </Navbar.Collapse>
     </Container>
   </Navbar>
-
 );
 
 export default Header;

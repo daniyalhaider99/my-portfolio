@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
 import Experience from './components/Experience';
-import Services from './components/Services';
+import Skills from './components/Skills';
 import Works from './components/Works';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
@@ -18,7 +18,7 @@ const App: React.FC = () => (
     <Home />
     <About />
     <Experience />
-    <Services />
+    <Skills />
     <Works />
     <Testimonials />
     <Footer />

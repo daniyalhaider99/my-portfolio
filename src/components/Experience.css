@@ -1,0 +1,211 @@
+.experience-carousel {
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.flip-card-container {
+  perspective: 1000px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 300px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.flip-card:hover {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card-front {
+  background: #201d1d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flip-card-back {
+  background: #201d1d;
+  transform: rotateY(180deg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.company-logo {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: contain;
+  margin-bottom: 2rem;
+}
+
+.duration-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: #f0f0f0;
+  border-radius: 20px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.company-name {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.experience-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ffffff;
+  text-align: left;
+  overflow-y: auto;
+  max-height: 280px;
+  padding-right: 1rem;
+}
+
+.experience-description::-webkit-scrollbar {
+  width: 6px;
+}
+
+.experience-description::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.experience-description::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.carousel-indicators {
+  bottom: -50px;
+}
+
+.carousel-indicators button {
+  background-color: #666;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: 5%;
+}
+
+@media (max-width: 768px) {
+  .flip-card-container {
+    height: 350px;
+  }
+
+  .flip-card {
+    height: 350px;
+  }
+
+  .company-logo {
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  .company-name {
+    font-size: 1.5rem;
+  }
+
+  .experience-description {
+    font-size: 0.9rem;
+    max-height: 230px;
+    padding: 0 1rem;
+  }
+
+  .duration-badge {
+    font-size: 0.9rem;
+    padding: 6px 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .flip-card-container {
+    height: 400px;
+  }
+
+  .flip-card {
+    height: 400px;
+  }
+
+  .company-logo {
+    max-width: 120px;
+    max-height: 120px;
+    margin-bottom: 1rem;
+  }
+
+  .company-name {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .experience-description {
+    font-size: 0.85rem;
+    max-height: 280px;
+    padding: 0 0.8rem;
+  }
+
+  .duration-badge {
+    font-size: 0.8rem;
+    padding: 5px 12px;
+  }
+
+  .carousel-control-prev, .carousel-control-next {
+    width: 10%;
+  }
+
+  .experience-carousel {
+    padding: 15px 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .flip-card-container {
+    height: 250px;
+  }
+
+  .flip-card {
+    height: 250px;
+  }
+
+  .company-logo {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .company-name {
+    font-size: 1.2rem;
+  }
+
+  .experience-description {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+}
