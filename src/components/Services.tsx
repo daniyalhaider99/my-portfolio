@@ -31,9 +31,9 @@ const services: Skill[] = [
   },
 ];
 
-const Skills: React.FC = () => (
+const Services: React.FC = () => (
   <div className="container">
-    <section id="skills" className="animate__animated animate__fadeIn">
+    <section id="services" className="animate__animated animate__fadeIn">
       <h1 className="section-title text-center">Expertise and Solutions</h1>
       <Carousel>
         {services.map((service, index) => (
@@ -52,4 +52,4 @@ const Skills: React.FC = () => (
   </div>
 );
 
-export default Skills;
+export default Services;
