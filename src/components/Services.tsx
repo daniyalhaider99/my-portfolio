@@ -1,6 +1,6 @@
 import React from 'react';
 import 'animate.css';
-import { Carousel } from 'react-bootstrap';
+import './Services.css';
 
 type Service = {
   title: string;
@@ -32,24 +32,24 @@ const services: Service[] = [
 ];
 
 const Services: React.FC = () => (
-  <section id="services" className="animate__animated animate__fadeIn">
-    <div className="container">
-      <h1 className="section-title text-center">Expertise and Solutions</h1>
-      <Carousel>
+  <div className="container">
+    <section id="services" className="animate__animated animate__fadeIn">
+      <h1 className="section-title text-center">SERVICES</h1>
+      <div className="services-grid">
         {services.map((service, index) => (
-          <Carousel.Item key={index}>
-            <div className="row service-row">
-              <div className="col-md-12 service-item">
+          <div key={index} className="service-card">
+            <div className="service-content">
+              <div className="service-header">
                 <img src={service.image} alt={service.title} className="service-image" />
                 <h3>{service.title}</h3>
-                <p>{service.description}</p>
               </div>
+              <p>{service.description}</p>
             </div>
-          </Carousel.Item>
+          </div>
         ))}
-      </Carousel>
-    </div>
-  </section>
+      </div>
+    </section>
+  </div>
 );
 
 export default Services;

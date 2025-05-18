@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css';
+import './Testimonials.css';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const testimonials = [
   { name: 'Ibtehaj Nasar', text: 'Daniyal consistently demonstrated a strong technical proficiency and an impressive attention to detail. He is a dedicated team player who adapts swiftly to new challenges and always brings a positive attitude to the workplace. His friendly and approachable personality, combined with his willingness to go above and beyond to assist colleagues, makes him an invaluable asset to any team. Daniyal is truly someone you can rely on.' },
@@ -13,12 +17,13 @@ const testimonials = [
   { name: 'Asad Ullah', text: "I had the pleasure of working with Daniyal Haider and was consistently impressed by his dedication, creativity, and problem-solving skills. He is a dedicated and creative professional with strong problem-solving skills. His strategic mindset and collaborative spirit make him a valuable asset to any team." },
   { name: 'Muhammad Yousaf Khan', text: "I have worked with Daniyal on multiple projects. He's an excellent resource whose adapts quickly whether it's a bug at the backend or a frontend fluctuation, third party API integrations, new feature you name it. A for sure to have on your team." },
   { name: 'Murtaza Zaidi', text: "I have had the pleasure of working with Daniyal, and I can confidently say that he is a dedicated and hardworking individual. His attention to detail and problem-solving skills have consistently impressed me. Daniyal is always willing to go the extra mile to ensure the success of any project. He is a team player who brings both enthusiasm and professionalism to every task. I highly recommend him for any opportunity he pursues!" },
-  { name: 'Hamza Naveed', text: "Daniyal is a great tech guy with strong communication skills. He had a habit of being punctual at work and an excellent team person. He has excellent skillset in Ruby on Rails and other JS frameworks as well and he loves to take on challanges on his own and an excellent self learner. I would strongly recommend him." }
+  { name: 'Hamza Naveed', text: "Daniyal is a great tech guy with strong communication skills. He had a habit of being punctual at work and an excellent team person. He has excellent skillset in Ruby on Rails and other JS frameworks as well and he loves to take on challanges on his own and an excellent self learner. I would strongly recommend him." },
+  { name: 'Zohaib Amir', text: "I have had the pleasure of working with Daniyal, and he is a highly skilled developer with expertise in React for frontend and Ruby on Rails for backend development. He writes clean, efficient code and strongly understand UI/UX and backend architecture. His skill in translating client requirements into tangible code is remarkable. Beyond his technical abilities, he is a great team player, always willing to share knowledge and collaborate effectively. I highly recommend him for any role that requires expertise in modern web development." }
 ];
 
 const Testimonials: React.FC = () => {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
+  const [_currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [isHovered, _setIsHovered] = useState(false);
 
   useEffect(() => {
     if (isHovered) return; // Don't run the interval if hovered
@@ -30,23 +35,28 @@ const Testimonials: React.FC = () => {
     return () => clearInterval(interval);
   }, [isHovered]);
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
     <section id="testimonials">
-      <h1 className="section-title text-center">Reviews & Recommendations</h1>
-      <div className="position-relative testimonial-card-wrapper">
-        {testimonials.map((testimonial, index) => (
-          <div
-            key={index}
-            className={`card testimonial-card position-absolute animate__animated ${index === currentTestimonial ? 'animate__fadeIn' : 'd-none'}`}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            <div className="card-body">
-              <h5 className="card-title">{testimonial.name}</h5>
-              <p className="card-text">{testimonial.text}</p>
+      <h1 className="section-title text-center mt-5">WHAT PEOPLE SAY</h1>
+      <div className="testimonials-slider-container">
+        <Slider {...settings}>
+          {testimonials.map((testimonial, idx) => (
+            <div key={idx} className="testimonial-card">
+              <div className="testimonial-card-body" style={{ textAlign: 'left' }}>
+                <span className="testimonial-name">{testimonial.name}</span>
+                <p className="testimonial-card-text mt-2">{testimonial.text}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </Slider>
       </div>
     </section>
   );
