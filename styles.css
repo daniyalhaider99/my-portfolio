@@ -1,6 +1,7 @@
 @import 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css';
+
 body {
-  background-color: #1a1a1a;
+  background-color: #171c26;
   color: #ffffff;
 }
 
@@ -21,13 +22,18 @@ section {
 }
 
 #about, #services, #works, #testimonials {
-  background: #1a1a1a;
+  background: #171c26;
 }
 
+/* Form styles */
 form input, form textarea {
   background-color: #333;
   color: #fff;
   border: 1px solid #555;
+}
+
+.form-control {
+  background-color: #242c3e !important;
 }
 
 button {
@@ -37,159 +43,12 @@ button {
   cursor: pointer;
 }
 
-footer {
-  background-color: #1f1f1f;
-  color: white;
-  padding: 1em 0;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.big-text {
-  font-size: 3em;
-  font-weight: bold;
-}
-
-.animated-text {
-  color: #ff5733;
-  font-size: 1.5em;
-}
-.testimonial-card-wrapper {
-  height: 300px;
-  position: relative;
-}
-
-.testimonial-card {
-  width: 100%;
-  max-width: 500px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #343a40;
-  color: #f8f9fa;
-  border: 1px solid #495057;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.testimonial-card .card-body {
-  padding: 20px;
-  text-align: left;
-  max-height: 350px;
-  overflow-y: auto;
-}
-
-.testimonial-card .card-title {
-  color: #f8f9fa;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.testimonial-card .card-text {
-  color: #e9ecef;
-  margin-bottom: 0;
-}
-
-.card-img-top {
-  max-height: 150px;
-  object-fit: cover;
-}
-
-.position-absolute {
-  top: 0;
-}
-
-.text-left {
-  text-align: left;
+.navbar-brand, .nav-link {
+  color: #FFFFFF;
 }
 
 .section-title {
+  margin-bottom: 3rem;
   font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-.service-row {
-  margin-bottom: 2rem;
-}
-
-.service-item {
-  text-align: left;
-  margin-bottom: 2rem;
-}
-
-.service-image {
-  width: 100%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  scale: 0.5
-}
-
-.experience-image {
-  width: 100%;
-  object-fit: cover;
-  scale: 0.5;
-}
-
-.service-item h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.service-item p {
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-}
-
-.project-card {
-  position: relative;
-  background-color: #121212;
-  text-align: center;
-}
-
-.project-image {
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  margin-bottom: 8px;
-}
-
-.project-card h3 {
-  margin: 0;
-  font-size: 1.1rem;
-  color: #f9f5f5;
-}
-
-.card-title {
-  color: #ffffff
-}
-
-
-.bg-light-work {
-  background-color: #05111d !important;
-}
-
-.text-primary {
-  color: #ffffff !important;
-}
-
-.carousel-indicators {
-  margin-bottom: -20px;
-}
-
-.carousel-inner {
-  position: relative;
-  width: 50%;
-  margin: auto;
-}
-.carousel-item {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.navbar-brand, .nav-link {
-  color: #FFFFFF
+  color: #3ec6ff;
 }
