@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css';
+import './Testimonials.css';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const testimonials = [
   { name: 'Ibtehaj Nasar', text: 'Daniyal consistently demonstrated a strong technical proficiency and an impressive attention to detail. He is a dedicated team player who adapts swiftly to new challenges and always brings a positive attitude to the workplace. His friendly and approachable personality, combined with his willingness to go above and beyond to assist colleagues, makes him an invaluable asset to any team. Daniyal is truly someone you can rely on.' },
@@ -18,8 +22,8 @@ const testimonials = [
 ];
 
 const Testimonials: React.FC = () => {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
+  const [_currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [isHovered, _setIsHovered] = useState(false);
 
   useEffect(() => {
     if (isHovered) return; // Don't run the interval if hovered
@@ -31,23 +35,28 @@ const Testimonials: React.FC = () => {
     return () => clearInterval(interval);
   }, [isHovered]);
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
     <section id="testimonials">
-      <h1 className="section-title text-center">Reviews & Recommendations</h1>
-      <div className="position-relative testimonial-card-wrapper">
-        {testimonials.map((testimonial, index) => (
-          <div
-            key={index}
-            className={`card testimonial-card position-absolute animate__animated ${index === currentTestimonial ? 'animate__fadeIn' : 'd-none'}`}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            <div className="card-body">
-              <h5 className="card-title">{testimonial.name}</h5>
-              <p className="card-text">{testimonial.text}</p>
+      <h1 className="section-title text-center mt-5">WHAT PEOPLE SAY</h1>
+      <div className="testimonials-slider-container">
+        <Slider {...settings}>
+          {testimonials.map((testimonial, idx) => (
+            <div key={idx} className="testimonial-card">
+              <div className="testimonial-card-body" style={{ textAlign: 'left' }}>
+                <span className="testimonial-name">{testimonial.name}</span>
+                <p className="testimonial-card-text mt-2">{testimonial.text}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </Slider>
       </div>
     </section>
   );

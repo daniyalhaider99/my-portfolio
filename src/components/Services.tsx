@@ -1,14 +1,14 @@
 import React from 'react';
 import 'animate.css';
-import { Carousel } from 'react-bootstrap';
+import './Services.css';
 
-type Skill = {
+type Service = {
   title: string;
   description: string;
   image: string;
 };
 
-const services: Skill[] = [
+const services: Service[] = [
   {
     title: "Software Development",
     description: "Providing end-to-end software development services, from requirements gathering to deployment. I develop robust, scalable, and efficient software solutions tailored to meet your business needs.",
@@ -34,20 +34,20 @@ const services: Skill[] = [
 const Services: React.FC = () => (
   <div className="container">
     <section id="services" className="animate__animated animate__fadeIn">
-      <h1 className="section-title text-center">Expertise and Solutions</h1>
-      <Carousel>
+      <h1 className="section-title text-center">SERVICES</h1>
+      <div className="services-grid">
         {services.map((service, index) => (
-          <Carousel.Item key={index}>
-            <div className="row service-row">
-              <div className="col-md-12 service-item">
+          <div key={index} className="service-card">
+            <div className="service-content">
+              <div className="service-header">
                 <img src={service.image} alt={service.title} className="service-image" />
                 <h3>{service.title}</h3>
-                <p>{service.description}</p>
               </div>
+              <p>{service.description}</p>
             </div>
-          </Carousel.Item>
+          </div>
         ))}
-      </Carousel>
+      </div>
     </section>
   </div>
 );
