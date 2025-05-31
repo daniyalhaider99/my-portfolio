@@ -1,23 +1,22 @@
 .big-text {
   font-size: clamp(2rem, 5vw, 3.5rem);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   line-height: 1.2;
+  text-align: left;
 }
 
 .animated-text {
   font-size: clamp(1.25rem, 3vw, 2rem);
   color: #3498db;
-  min-height: clamp(2rem, 4vw, 3rem);
-  display: inline-block;
+  display: block;
   position: relative;
-  padding-right: 8px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  min-height: 2.5rem;
 }
 
-.animated-text::after {
-  content: '|';
-  position: absolute;
-  right: 0;
+.cursor {
+  display: inline-block;
   animation: blink 0.7s infinite;
   font-weight: bold;
   color: #3498db;

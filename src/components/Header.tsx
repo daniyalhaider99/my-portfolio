@@ -4,14 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Header.css';
-
-const navItems = [
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#projects", label: "Projects" },
-  { href: "#testimonials", label: "Testimonials" },
-  { href: "#contact", label: "Contact", isContact: true },
-];
+import { navItems } from '../data/header';
 
 const Header: React.FC = () => (
   <Navbar expand="lg">
