@@ -1,23 +1,17 @@
 import 'animate.css';
 import React, { useEffect, useState, useMemo } from 'react';
 import './About.css';
+import { roleTexts } from '../data/about';
 
 const About: React.FC = () => {
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [textIndex, setTextIndex] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
-  const [showCursor, setShowCursor] = useState(true);
-
-  const texts = [
-    'Full Stack Developer',
-    'Prompt Engineer',
-    'DevOps Engineer',
-    'Problem Solver'
-  ];
+  const [_showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
-    const currentText = texts[textIndex];
+    const currentText = roleTexts[textIndex];
     const shouldDelete = isDeleting;
     const currentLength = displayText.length;
 
@@ -33,7 +27,7 @@ const About: React.FC = () => {
         setIsDeleting(true);
       } else if (shouldDelete && currentLength === 0) {
         setIsDeleting(false);
-        setTextIndex((textIndex + 1) % texts.length);
+        setTextIndex((textIndex + 1) % roleTexts.length);
         setTypingSpeed(1000);
       }
     };
@@ -66,11 +60,9 @@ const About: React.FC = () => {
           <div className="col-md-6 animate__animated animate__fadeInLeft">
             <div className="about-content">
               <h1 className="big-text">A Passionate</h1>
-              <div className="animated-text-container">
-                <span className="animated-text">
-                  {displayText}
-                  <span className="cursor" style={{ opacity: showCursor ? 1 : 0 }}></span>
-                </span>
+              <div className="animated-text">
+                {displayText}
+                <span className="cursor">|</span>
               </div>
               <p style={{ textAlign: 'left' }}>
                 Since writing my first line of code, I have been passionate about creating innovative, user-centric software. I thrive on exploring new technologies, collaborating with talented teams, and building applications that combine functionality with thoughtful design. Whether through pair programming, code reviews, or creative brainstorming, I believe collaboration is essential to delivering exceptional results. Outside of coding, I recharge through photography, reading, and spending time in nature—activities that inspire my creativity and broaden my perspective.
