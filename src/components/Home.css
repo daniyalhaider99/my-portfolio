@@ -180,10 +180,8 @@
   display: inline-block;
   font-size: 2.5rem;
   font-weight: 700;
-  color: #fff;
   position: relative;
-  background: #fff;
-  color: #232b3b;
+  color: #FFFFF;
   padding: 0 0.5rem;
   border-radius: 6px;
   z-index: 1;
@@ -313,4 +311,54 @@
 .profile-socials a:hover {
   background: #3ec6ff;
   color: #232b3b;
+}
+
+/* Responsive adjustments for social buttons */
+@media (max-width: 992px) {
+  .profile-socials {
+    left: 50%;
+    top: auto;
+    bottom: -80px;
+    transform: translateX(-50%);
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .profile-art-container {
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-socials {
+    bottom: -70px;
+    gap: 1.5rem;
+  }
+
+  .profile-socials a {
+    width: 35px;
+    height: 35px;
+    font-size: 1.1rem;
+  }
+
+  .profile-art-container {
+    margin-bottom: 90px;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-socials {
+    bottom: -60px;
+    gap: 1.25rem;
+  }
+
+  .profile-socials a {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+
+  .profile-art-container {
+    margin-bottom: 80px;
+  }
 }

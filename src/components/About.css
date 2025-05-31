@@ -1,15 +1,17 @@
 .big-text {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   margin-bottom: 1.5rem;
+  line-height: 1.2;
 }
 
 .animated-text {
-  font-size: 2rem;
+  font-size: clamp(1.25rem, 3vw, 2rem);
   color: #3498db;
-  min-height: 3rem;
+  min-height: clamp(2rem, 4vw, 3rem);
   display: inline-block;
   position: relative;
   padding-right: 8px;
+  margin-bottom: 1rem;
 }
 
 .animated-text::after {
@@ -45,36 +47,59 @@
   50% { border-color: #3498db }
 }
 
+/* Container styles */
+#about {
+  padding: 4rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
+#about .row {
+  margin: 0;
+  padding: 0 1rem;
+}
+
+/* Text styles with improved responsiveness */
+#about p {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  line-height: 1.6;
+  margin-top: 2rem;
+  max-width: 600px;
+}
+
+/* Stats section improvements */
 .stats-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5rem;
+  gap: clamp(2rem, 5vw, 5rem);
   background: #232b3b;
-  padding: 2.5rem 0;
-  margin: 2rem 0;
+  padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1rem, 2vw, 2rem);
+  margin: clamp(1.5rem, 3vw, 2rem) 0;
   border-radius: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .stat-block {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  min-width: 180px;
-  position: relative;
+  align-items: center;
+  min-width: clamp(140px, 20vw, 180px);
+  text-align: center;
+  padding: 0.5rem;
 }
 
 .stat-number {
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   color: #7b6cf6;
   margin-bottom: 0.2em;
+  line-height: 1;
 }
 
 .stat-label {
   color: #fff;
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
   font-weight: 400;
   margin-bottom: 0.5em;
 }
@@ -104,58 +129,83 @@
   box-shadow: 0 4px 16px #7b6cf6;
 }
 
-/* Mobile Responsive Styles */
-@media screen and (max-width: 768px) {
-  .big-text {
-    font-size: 2.5rem;
+/* Responsive breakpoints */
+@media screen and (max-width: 992px) {
+  #about {
+    padding: 3rem 0;
+  }
+
+  #about .row {
+    flex-direction: column;
+  }
+
+  #about .col-md-6 {
+    width: 100%;
     text-align: center;
   }
 
-  .animated-text {
-    font-size: 1.5rem;
-    display: block;
-    text-align: center;
-    margin-bottom: 1rem;
+  #about .col-md-6:first-child {
+    margin-bottom: 2rem;
+  }
+
+  #about p {
+    margin: 2rem auto;
+  }
+
+  .stats-section {
+    margin: 2rem auto;
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #about {
+    padding: 2rem 0;
   }
 
   .stats-section {
     flex-direction: column;
-    gap: 2rem;
-    padding: 1.5rem 0;
-    margin: 1.5rem 0;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
   }
 
   .stat-block {
-    align-items: center;
-    min-width: auto;
     width: 100%;
+    min-width: auto;
   }
 
-  .stat-number {
-    font-size: 2.5rem;
-  }
-
-  .stat-label {
-    font-size: 1rem;
-    text-align: center;
+  .stat-block:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1.5rem;
   }
 }
 
-/* Small Mobile Devices */
 @media screen and (max-width: 480px) {
-  .big-text {
-    font-size: 2rem;
+  #about {
+    padding: 1.5rem 0;
   }
 
-  .animated-text {
-    font-size: 1.25rem;
+  .stats-section {
+    margin: 1.5rem 0;
+    padding: 1.25rem 0.75rem;
   }
 
-  .stat-number {
-    font-size: 2rem;
+  .stat-block {
+    padding: 0.75rem;
   }
 
-  .stat-label {
-    font-size: 0.9rem;
+  .stat-block:not(:last-child) {
+    padding-bottom: 1.25rem;
+  }
+}
+
+/* Animation improvements */
+.animate__animated {
+  animation-duration: 1s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate__animated {
+    animation: none !important;
   }
 }

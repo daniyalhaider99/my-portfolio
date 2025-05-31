@@ -61,26 +61,32 @@ const About: React.FC = () => {
 
   return (
     <section id="about" className="animate__animated animate__fadeIn">
-      <div className="row align-items-center">
-        <div className="col-md-6 animate__animated animate__fadeInLeft" style={{ textAlign: 'left' }}>
-          <h1 className="big-text">A Passionate</h1>
-          <span className="animated-text">
-            {displayText}
-            <span className="cursor" style={{ opacity: showCursor ? 1 : 0 }}>|</span>
-          </span>
-          <p className="mt-5">
-            Since writing my first line of code, I have been passionate about creating innovative, user-centric software. I thrive on exploring new technologies, collaborating with talented teams, and building applications that combine functionality with thoughtful design. Whether through pair programming, code reviews, or creative brainstorming, I believe collaboration is essential to delivering exceptional results. Outside of coding, I recharge through photography, reading, and spending time in nature—activities that inspire my creativity and broaden my perspective.
-          </p>
-        </div>
-        <div className="col-md-6 mt-4 mt-md-0">
-          <div className="stats-section">
-            <div className="stat-block">
-              <div className="stat-number">{years}+</div>
-              <div className="stat-label">Years of Experience</div>
+      <div className="container">
+        <div className="row align-items-center">
+          <div className="col-md-6 animate__animated animate__fadeInLeft">
+            <div className="about-content">
+              <h1 className="big-text">A Passionate</h1>
+              <div className="animated-text-container">
+                <span className="animated-text">
+                  {displayText}
+                  <span className="cursor" style={{ opacity: showCursor ? 1 : 0 }}></span>
+                </span>
+              </div>
+              <p style={{ textAlign: 'left' }}>
+                Since writing my first line of code, I have been passionate about creating innovative, user-centric software. I thrive on exploring new technologies, collaborating with talented teams, and building applications that combine functionality with thoughtful design. Whether through pair programming, code reviews, or creative brainstorming, I believe collaboration is essential to delivering exceptional results. Outside of coding, I recharge through photography, reading, and spending time in nature—activities that inspire my creativity and broaden my perspective.
+              </p>
             </div>
-            <div className="stat-block">
-              <div className="stat-number">5+</div>
-              <div className="stat-label">Technologies Mastered</div>
+          </div>
+          <div className="col-md-6">
+            <div className="stats-section animate__animated animate__fadeInRight">
+              <div className="stat-block">
+                <div className="stat-number">{years}+</div>
+                <div className="stat-label">Years of Experience</div>
+              </div>
+              <div className="stat-block">
+                <div className="stat-number">5+</div>
+                <div className="stat-label">Technologies Mastered</div>
+              </div>
             </div>
           </div>
         </div>
