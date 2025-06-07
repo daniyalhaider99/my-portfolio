@@ -52,3 +52,7 @@ button {
   font-size: 2.5rem;
   color: #7b6cf6;
 }
+
+.form-control {
+  color: #FFFFFF !important;
+}
