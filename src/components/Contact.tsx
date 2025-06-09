@@ -13,7 +13,7 @@ const Contact: React.FC = () => {
 
   useEffect(() => {
     console.log('Component mounted - Initializing EmailJS');
-    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+    emailjs.init('eMVRmKvfCgo8q8BBS');
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -38,10 +38,10 @@ const Contact: React.FC = () => {
 
       console.log('Attempting to send email...');
       const result = await emailjs.sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_KEY,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_KEY,
+        'service_8tdjw47',
+        'template_ypk827p',
         form.current,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        'eMVRmKvfCgo8q8BBS'
       );
       console.log('EmailJS Result:', result);
 
